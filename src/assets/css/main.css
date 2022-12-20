@@ -67,7 +67,7 @@ body{
     background: linear-gradient(0deg, rgba(204,78,81,1) 0%, rgba(224,153,74,1) 14%, rgba(248,218,89,1) 36%, rgba(80,158,75,1) 58%, rgba(25,162,199,1) 78%, rgba(213,101,155,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cc4e51",endColorstr="#d5659b",GradientType=1);
     clip-path: polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
-    animation: fade ease-out 3s 0.3s forwards;
+    animation: fade ease-out 4s 0.5s forwards;
 }
 .planet-circle{
     background-color: #fff;
