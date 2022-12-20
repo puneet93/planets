@@ -79,6 +79,20 @@ body{
     bottom: 13px;
     right: 2px;
 }
+.planet-circle:before{
+    width: 30px;
+    height: 30px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    background: var(--bg) url('../images/middle-icon.png') repeat center / cover;
+}
 .middle-line{
     background-color: #999;
     position: absolute;
