@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+*{	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:root{
+    --white: #fff;
+	--bg: #141416;
+    --blue: rgb(19,58,198);
+    --bg-card: #23262f;
+    --hr: #353945;
+    --ff: 'Rubik', sans-serif;
+}
+
+html {
+  font-size: 100.01%;
+}
+
+body{
+	font-size: 14px;
+	font-weight: 400;
+    line-height: 1.6;
+	min-height: 100vh;
+	overflow-x: hidden;
+	color: var(--white);
+    font-family: var(--ff);
+	word-break: break-word;
+	background: var(--bg) url('../images/bg.png') repeat top left / auto;
+}
+
+.lead{
+	font-size: 1.1em;
+}
+
+.container{
+	max-width: 1060px;
+    margin: auto;
+	width: 100%;
+}
+
+.planet-app{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fade {
+    0% { opacity: 0; visibility: hidden; }
+    100% { opacity: 1; visibility: visible; }
+}
+
+.planet-polygon{
+    opacity: 0;
+    margin: auto;
+    width: 280px;
+    height: 300px;
+    visibility: hidden;
+    position: relative;
+    background: rgb(204,78,81);
+    background: -moz-linear-gradient(0deg, rgba(204,78,81,1) 0%, rgba(224,153,74,1) 14%, rgba(248,218,89,1) 36%, rgba(80,158,75,1) 58%, rgba(25,162,199,1) 78%, rgba(213,101,155,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(204,78,81,1) 0%, rgba(224,153,74,1) 14%, rgba(248,218,89,1) 36%, rgba(80,158,75,1) 58%, rgba(25,162,199,1) 78%, rgba(213,101,155,1) 100%);
+    background: linear-gradient(0deg, rgba(204,78,81,1) 0%, rgba(224,153,74,1) 14%, rgba(248,218,89,1) 36%, rgba(80,158,75,1) 58%, rgba(25,162,199,1) 78%, rgba(213,101,155,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cc4e51",endColorstr="#d5659b",GradientType=1);
+    clip-path: polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
+    animation: fade ease-out 3s 0.3s forwards;
+}
+.planet-circle{
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    left: 2px;
+    top: 13px;
+    bottom: 13px;
+    right: 2px;
+}
+.middle-line{
+    background-color: #999;
+    position: absolute;
+    margin-top: -1px;
+    margin: auto;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+}
+.bottom-line{
+    transform-origin: top center;
+    background-color: #999;
+    position: absolute;
+    margin-top: -1px;
+    margin: auto;
+    height: 50%;
+    width: 1px;
+    left: 50%;
+    top: 50%;
+}
+.bottom-line-1{
+    transform: rotate(30deg);
+}
+.bottom-line-2{
+    transform: rotate(-30deg);
+}
+
+.heart-icon{
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    bottom: 25%;
+    left: 13%;
+}
+.hands-icon{
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    bottom: 25%;
+    right: 13%;
+}
+
+.heart-links{
+    flex-direction: column;
+    position: absolute;
+    margin-top: -1px;
+    display: flex;
+    width: 53%;
+    top: 39%;
+    height: 50%;
+    transform: rotate(-30deg);
+    transform-origin: center center;
+    clip-path: polygon(100% 51%, 9% -5%, 3% 111%);
+}
+.heart-links button{
+    border: none;
+    width: 100%;
+    height: 50%;
+    flex-grow: 1;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+}
+.heart-links button span{
+    position: absolute;
+}
+.heart-links button:first-child span{
+    top: 50%;
+    left: 22%;
+}
+.heart-links button:last-child span{
+    top: 30%;
+    left: 22%;
+    transform: rotate(-12deg);
+}
