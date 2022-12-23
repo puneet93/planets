@@ -28,7 +28,7 @@ body{
 	color: var(--white);
     font-family: var(--ff);
 	word-break: break-word;
-	background: var(--bg) url('../images/bg.png') repeat top left / auto;
+	background: var(--bg) url('../images/background.jpg') repeat center / cover;
 }
 
 .lead{
@@ -58,15 +58,15 @@ body{
     opacity: 0;
     margin: auto;
     width: 280px;
-    height: 300px;
+    height: 328px;
     visibility: hidden;
     position: relative;
-    background: rgb(204,78,81);
-    background: -moz-linear-gradient(0deg, rgba(204,78,81,1) 0%, rgba(224,153,74,1) 14%, rgba(248,218,89,1) 36%, rgba(80,158,75,1) 58%, rgba(25,162,199,1) 78%, rgba(213,101,155,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(204,78,81,1) 0%, rgba(224,153,74,1) 14%, rgba(248,218,89,1) 36%, rgba(80,158,75,1) 58%, rgba(25,162,199,1) 78%, rgba(213,101,155,1) 100%);
-    background: linear-gradient(0deg, rgba(204,78,81,1) 0%, rgba(224,153,74,1) 14%, rgba(248,218,89,1) 36%, rgba(80,158,75,1) 58%, rgba(25,162,199,1) 78%, rgba(213,101,155,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cc4e51",endColorstr="#d5659b",GradientType=1);
-    clip-path: polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
+    /* background: rgb(204,82,87);
+    background: -moz-linear-gradient(0deg, rgba(204,82,87,1) 0%, rgba(224,156,77,1) 14%, rgba(245,215,97,1) 36%, rgba(77,156,72,1) 58%, rgba(24,160,205,1) 78%, rgba(208,101,153,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(204,82,87,1) 0%, rgba(224,156,77,1) 14%, rgba(245,215,97,1) 36%, rgba(77,156,72,1) 58%, rgba(24,160,205,1) 78%, rgba(208,101,153,1) 100%);
+    background: linear-gradient(0deg, rgba(204,82,87,1) 0%, rgba(224,156,77,1) 14%, rgba(245,215,97,1) 36%, rgba(77,156,72,1) 58%, rgba(24,160,205,1) 78%, rgba(208,101,153,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cc5257",endColorstr="#d06599",GradientType=1); */
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50.4% 100%, 0 75%, 0 25%);
     animation: fade ease-out 4s 0.5s forwards;
 }
 .planet-circle{
@@ -74,14 +74,14 @@ body{
     position: absolute;
     border-radius: 50%;
     overflow: hidden;
-    left: 2px;
-    top: 13px;
-    bottom: 13px;
-    right: 2px;
+    left: 0px;
+    top: 24px;
+    bottom: 24px;
+    right: 0px;
 }
 .planet-circle:before{
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     top: 0;
     bottom: 0;
     right: 0;
@@ -125,6 +125,7 @@ body{
     border-radius: 50%;
     position: absolute;
     cursor: pointer;
+    max-width: 50px;
     bottom: 25%;
     left: 13%;
 }
@@ -133,6 +134,7 @@ body{
     border-radius: 50%;
     position: absolute;
     cursor: pointer;
+    max-width: 50px;
     bottom: 25%;
     right: 13%;
 }
@@ -147,7 +149,7 @@ body{
     height: 50%;
     transform: rotate(-30deg);
     transform-origin: center center;
-    clip-path: polygon(100% 51%, 9% -5%, 3% 111%);
+    clip-path: polygon(102% 50%, 9% -6%, -5% 115%);
 }
 .heart-links button{
     border: none;
@@ -171,4 +173,12 @@ body{
     top: 30%;
     left: 22%;
     transform: rotate(-12deg);
+}
+
+.planet-polygon svg{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    max-width: 100%;
 }

@@ -2,6 +2,7 @@
 import Heart from '../assets/images/heart-icon.png'
 import Hands from '../assets/images/hands.png'
 import { useState } from 'react';
+import Polugon from './snippets/PolygonShape';
 
 function Home() {
     const [heartLinks, setHeartLinks] = useState(false);
@@ -9,11 +10,11 @@ function Home() {
         <div className="planet-app">
             <div className="container">
                 <div className="planet-polygon">
+                    <Polugon />
                     <div className="planet-circle">
                         <div className="middle-line" />
                         <div className="bottom-line bottom-line-1" />
                         <div className="bottom-line bottom-line-2" />
-
                         <img src={Heart} onClick={() => setHeartLinks(true)} alt="Heart" className='heart-icon' />
                         <img src={Hands} alt="Hands" className='hands-icon' />
 
