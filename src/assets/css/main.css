@@ -211,3 +211,7 @@ body{
 .modal-header{
     border: none !important;
 }
+
+.modal{
+    color: #141416;
+}
